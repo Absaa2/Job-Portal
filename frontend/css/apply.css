@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height instead of height for better responsiveness */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjusted for better responsiveness */
+    max-width: 500px; /* Ensures the container doesn't get too wide on larger screens */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px; /* Added for better typography */
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #555;
+    padding: 0 5px; /* Added padding for better spacing */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Slightly increased margin for better spacing */
+    color: #333;
+    font-size: 14px; /* Added for consistency */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px; /* Slightly increased padding for better input field appearance */
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px; /* Added a minimum height for better usability */
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding for better button appearance */
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added smooth transition */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    input[type="file"] {
+        padding: 8px; /* Adjusted padding for smaller screens */
+    }
+
+    button {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+}

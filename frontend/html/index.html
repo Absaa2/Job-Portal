@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elevate Workforce Solutions connects skilled professionals with exciting career opportunities in Nepal. Explore job openings, employer profiles, and career resources.">
+    <meta name="keywords" content="job search, career opportunities, Nepal, employer profiles, career resources">
+    <meta name="author" content="Elevate Workforce Solutions">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Elevate Workforce Solutions - Connecting Talent with Opportunities">
+    <meta property="og:description" content="Connecting skilled professionals with exciting career opportunities in Nepal. Explore job openings and employer profiles.">
+    <meta property="og:image" content="../images/og-image.jpg">
+    <meta property="og:url" content="https://www.elevateworkforcesolutions.com">
+    
+    <title>Elevate Workforce Solutions - Connecting Talent with Opportunities</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" aria-current="page">Home</a></li>
+                <li><a href="./job-search.html">Job Search</a></li>
+                <li><a href="./notification.html">User Dashboard</a></li>
+                <li class="admin-login"><a href="./admin_login.html">Admin Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Elevate Workforce Solutions</h1>
+            <p>Connecting skilled professionals with exciting career opportunities in Nepal.</p>
+            <div class="cta-buttons">
+                <button id="loginBtn" onclick="window.location.href='./login.html'">Login</button>
+                <button id="findJobBtn" onclick="window.location.href='./job-search.html'">Find a Job</button>
+                <button id="postJobBtn" onclick="window.location.href='./company-post-job.html'">Post a Job</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Elevate Workforce Solutions</h2>
+            <article>
+                <h3>Our Mission</h3>
+                <p>Elevate Workforce Solutions is dedicated to connecting skilled professionals with exciting career opportunities in Nepal. We are committed to empowering individuals to reach their full potential and contribute to a thriving workforce.</p>
+            </article>
+            <article>
+                <h3>Our Values</h3>
+                <p>We operate with integrity, transparency, and respect for our clients and candidates. We believe in fostering a culture of collaboration and continuous improvement, ensuring we deliver the highest quality service.</p>
+            </article>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Services</h2>
+            <div class="service-grid">
+                <article class="service-item">
+                    <h3>Job Search</h3>
+                    <p>Browse our extensive database of current job openings across various industries in Nepal.</p>
+                </article>
+                <article class="service-item">
+                    <h3>Employer Profiles</h3>
+                    <p>Discover leading companies in Nepal looking for top talent, explore their culture and values.</p>
+                </article>
+                <article class="service-item">
+                    <h3>Success Stories</h3>
+                    <p>Read inspiring stories of candidates who have found their dream jobs through Elevate Workforce Solutions.</p>
+                </article>
+                <article class="service-item">
+                    <h3>Career Resources</h3>
+                    <p>Access valuable career advice, resume building tips, and interview preparation resources.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Employer Profiles Section -->
+        <section id="employer-profiles" aria-labelledby="employer-profiles-heading">
+            <h2 id="employer-profiles-heading">Employer Profiles</h2>
+            <div class="profile-features">
+                <article class="feature">
+                    <h3>Company Overview</h3>
+                    <p>Learn about the company's mission, vision, and core values to understand its culture and work environment.</p>
+                </article>
+                <article class="feature">
+                    <h3>Company Culture</h3>
+                    <p>Get insights into the company's culture, work-life balance, and employee benefits to determine if it aligns with your preferences.</p>
+                </article>
+                <article class="feature">
+                    <h3>Employee Testimonials</h3>
+                    <p>Read testimonials from current employees to gain firsthand perspectives on their experiences working at the company.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section id="success-stories" aria-labelledby="success-stories-heading">
+            <h2 id="success-stories-heading">Success Stories</h2>
+            <article class="story">
+                <h3>From Entry Level to Management</h3>
+                <p>Discover how one candidate leveraged Elevate Workforce Solutions to advance their career from entry-level to a management position.</p>
+            </article>
+            <article class="story">
+                <h3>Finding a Dream Job Overseas</h3>
+                <p>Explore the story of an individual who found their dream job abroad with the help of Elevate Workforce Solutions.</p>
+            </article>
+            <article class="story">
+                <h3>Launching a Successful Business</h3>
+                <p>Read about how one candidate used Elevate Workforce Solutions to gain the skills and network needed to launch their own business.</p>
+            </article>
+        </section>
+
+        <!-- Career Resources Section -->
+        <section id="career-resources" aria-labelledby="career-resources-heading">
+            <h2 id="career-resources-heading">Career Resources</h2>
+            <article class="resource">
+                <h3>Resume Writing Tips</h3>
+                <p>Learn how to craft a professional resume that highlights your skills and experience to make a positive first impression.</p>
+            </article>
+            <article class="resource">
+                <h3>Interview Preparation</h3>
+                <p>Get insights into common interview questions and techniques for effectively communicating your qualifications and personality.</p>
+            </article>
+            <article class="resource">
+                <h3>Networking Strategies</h3>
+                <p>Discover effective strategies for expanding your professional network and leveraging connections to find career opportunities.</p>
+            </article>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <p>Elevate Workforce Solutions is here to help you achieve your career goals. Contact us today to learn more about our services and how we can help you find your next career move.</p>
+            <form id="contactForm" action="/submit-form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Elevate Workforce Solutions. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="https://facebook.com" aria-label="Facebook">Facebook</a> |
+            <a href="https://twitter.com" aria-label="Twitter">Twitter</a> |
+            <a href="https://linkedin.com" aria-label="LinkedIn">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="../public/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        .approved {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .rejected {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .read {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    <div id="notificationsList">
+        <h3>Notifications</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Message</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody id="notificationsTable"></tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch notifications when the page loads
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const sessionToken = sessionStorage.getItem('sessionToken');
+                if (!sessionToken) {
+                    alert("You must be logged in.");
+                    window.location.href = "/frontend/html/login.html"; // Redirect to login page if no session token
+                    return;
+                }
+
+                const response = await fetch('http://localhost:5000/notifications', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${sessionToken}`
+                    }
+                });
+
+                const data = await response.json();
+
+                if (data.success && data.notifications.length > 0) {
+                    displayNotifications(data.notifications);
+                } else {
+                    document.getElementById('notificationsTable').innerHTML = '<tr><td colspan="3">No notifications available.</td></tr>';
+                }
+            } catch (error) {
+                console.error('Error fetching notifications:', error);
+                alert('Failed to fetch notifications.');
+            }
+        });
+
+        // Function to display notifications
+        function displayNotifications(notifications) {
+            const notificationsTable = document.getElementById('notificationsTable');
+            notificationsTable.innerHTML = '';
+
+            notifications.forEach(notification => {
+                const row = document.createElement('tr');
+                let rowClass = notification.status.toLowerCase();
+
+                if (notification.read_status === 1) {
+                    row.classList.add('read');
+                }
+
+                row.classList.add(rowClass);
+
+                row.innerHTML = `
+                    <td>${notification.message}</td>
+                    <td>${notification.status.charAt(0).toUpperCase() + notification.status.slice(1)}</td>
+                    <td>${new Date(notification.created_at).toLocaleString()}</td>
+                `;
+
+                notificationsTable.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>

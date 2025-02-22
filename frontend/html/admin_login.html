@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Login Page for accessing the admin dashboard.">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../css/admin_login.css">  <!-- Link to the admin_login.css -->
+   
+</head>
+<body>
+    <!-- Main Container -->
+    <main class="login-container">
+        <!-- Login Form Section -->
+        <section class="login-form">
+            <h1>Admin Login</h1>
+            <form id="adminLoginForm" aria-labelledby="login-heading">
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username" class="sr-only">Admin Username</label>
+                    <input type="text" id="username" name="username" placeholder="Admin Username" required aria-required="true">
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password" class="sr-only">Admin Password</label>
+                    <input type="password" id="password" name="password" placeholder="Admin Password" required aria-required="true">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="login-button">Login</button>
+            </form>
+
+            <!-- Error Message (Hidden by Default) -->
+            <div id="error-message" class="error-message" role="alert" aria-live="assertive" hidden>
+                Invalid credentials. Please try again.
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('adminLoginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:5000/admin/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // On success, store the session token in localStorage
+                    sessionStorage.setItem('sessionToken', data.sessionToken);
+                    window.location.href = "../html/admindashboard.html";  // Redirect to the dashboard
+                } else {
+                    // Show error message on failed login
+                    const errorMessage = document.getElementById('error-message');
+                    errorMessage.removeAttribute('hidden');
+                    errorMessage.setAttribute('aria-hidden', 'false');
+                }
+            } catch (error) {
+                console.error('Login failed:', error);
+                alert('Login failed. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

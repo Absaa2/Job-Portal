@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard - Elevate Workforce Solutions</title>
+    <link rel="stylesheet" href="../css/company-dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h2>Your Posted Jobs</h2>
+
+        <!-- Job Table -->
+        <table id="jobTable">
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Industry</th>
+                    <th>Description</th>  <!-- ✅ Fixed Typo & Closing Tag -->
+                    <th>Location</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="jobList"></tbody>
+        </table>
+
+        <!-- Edit Job Form -->
+        <div id="editJobForm" style="display:none;">
+            <h3>Edit Job</h3>
+            <form id="editJobFormDetails">
+                <input type="hidden" id="editJobId" />
+                <div>
+                    <label for="editJobTitle">Title</label>
+                    <input type="text" id="editJobTitle" required />
+                </div>
+                <div>
+                    <label for="editJobIndustry">Industry</label>
+                    <input type="text" id="editJobIndustry" required />
+                </div>
+                <div>
+                    <label for="editJobDescription">Description</label>  <!-- ✅ Fixed ID -->
+                    <textarea id="editJobDescription" required></textarea>
+                </div>
+                <div>
+                    <label for="editJobLocation">Location</label>
+                    <input type="text" id="editJobLocation" required />
+                </div>
+                <div>
+                    <label for="editJobSalary">Salary</label>
+                    <input type="number" id="editJobSalary" required />
+                </div>
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancelEditBtn">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Create New Job Button -->
+        <button id="createJobBtn">Create New Job</button>
+    </div>
+
+    <script src="../public/js/company-dashboard.js" defer></script>  <!-- ✅ Fixed Path -->
+</body>
+</html>

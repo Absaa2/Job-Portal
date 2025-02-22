@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #d8b4fe, #e9d5ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Admin Login Form Container */
+#adminLoginForm {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(216, 180, 254, 0.4);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: popUp 0.8s ease-in-out;
+}
+
+/* Input Fields */
+#adminLoginForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Focus state for inputs */
+#adminLoginForm input:focus {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 12px #d8b4fe;
+}
+
+/* Placeholder Styling */
+#adminLoginForm input::placeholder {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Login Button */
+#adminLoginForm button {
+    width: 100%;
+    padding: 12px;
+    background: #7c3aed;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+/* Button hover effect */
+#adminLoginForm button:hover {
+    background: #6b21a8;
+    box-shadow: 0 0 12px #d8b4fe;
+    transform: scale(1.05);
+}
+
+/* Error Message Styling */
+#error-message {
+    color: #b71c1c;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #adminLoginForm {
+        padding: 35px;
+        max-width: 85%;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animation */
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

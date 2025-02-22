@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="../css/apply.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application Form</h1>
+        <form id="apply-form" action="#" method="post" enctype="multipart/form-data">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </fieldset>
+
+            <!-- Cover Letter (Missing in Original Code) -->
+            <fieldset>
+                <legend>Cover Letter</legend>
+                <label for="cover-letter">Cover Letter:</label>
+                <textarea id="cover-letter" name="coverLetter" rows="4" required></textarea>
+            </fieldset>
+
+            <!-- Education -->
+            <fieldset>
+                <legend>Education</legend>
+                <label for="school">School/University:</label>
+                <input type="text" id="school" name="school" required>
+
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" required>
+
+                <label for="graduation-year">Graduation Year:</label>
+                <input type="number" id="graduation-year" name="graduationYear" required>
+            </fieldset>
+
+            <!-- Work Experience -->
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="company">Previous Company:</label>
+                <input type="text" id="company" name="company">
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position">
+
+                <label for="duration">Duration (in years):</label>
+                <input type="number" id="duration" name="duration">
+            </fieldset>
+
+            <!-- Resume Upload -->
+            <fieldset>
+                <legend>Resume</legend>
+                <label for="resume">Upload Resume (PDF only):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+            </fieldset>
+
+            <!-- Hidden Inputs -->
+            <input type="hidden" id="user-id" name="userId">
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <!-- Display Job Details (dynamically filled by JavaScript) -->
+        <div id="job-details"></div>
+    </div>
+
+    <script src="../public/js/apply.js"></script>
+</body>
+</html>

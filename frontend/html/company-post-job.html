@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - Elevate Workforce Solutions</title>
+    <link rel="stylesheet" href="../css/company-post-job.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Post a Job</h2>
+        <form id="post-job-form">
+            <input type="text" id="job-title" name="title" placeholder="Job Title" required>
+            <input type="text" id="job-industry" name="industry" placeholder="Industry" required> <!-- Added industry field -->
+            <textarea id="job-description" name="description" placeholder="Job Description" required></textarea>
+            <input type="text" id="job-location" name="location" placeholder="Job Location" required>
+            <input type="number" id="job-salary" name="salary" placeholder="Salary" required>
+            <button type="submit">Post Job</button>
+        </form>
+        <p><a href="company-dashboard.html">Back to Dashboard</a></p>
+    </div>
+
+    <script src="../public/js/company-post-job.js" defer></script>
+    <script src="../public/js/company-login.js" defer></script> <!-- New script to check authentication -->
+</body>
+</html>

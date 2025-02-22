@@ -1,0 +1,90 @@
+/* Import Google Font */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Authentication Container */
+.auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+#auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#auth-form input {
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #222;
+    color: #ffffff;
+    text-align: center;
+}
+
+#auth-form input::placeholder {
+    color: #bbb;
+}
+
+/* Button Styling */
+#auth-form button {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#auth-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 204, 0, 0.4);
+}
+
+/* Links */
+.auth-container p {
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+.auth-container a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.auth-container a:hover {
+    color: #ff9900;
+}
+
